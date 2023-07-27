@@ -1,4 +1,4 @@
-<img width="246" alt="image" src="https://github.com/prackash/Rock-Paper-Scissor-classification-using-CNN/assets/72211071/05952f0b-ca7c-46e4-a523-2428643891a7"># Rock-Paper-Scissor-classification-using-CNN
+# Rock-Paper-Scissor-classification-using-CNN
 1.	Introduction
 
 Rock Paper Scissors (RPS) is a popular game played by children and adults all over the world. With rapid advancements in computer vision and machine learning, there have been papers where authors have developed algorithms and models to recognize the hand gestures used in the game. One popular method is to use Convolutional Neural Networks (CNNs) to classify the hand gestures in RPS.
@@ -62,25 +62,13 @@ validation_generator = validation_datagen.flow_from_directory(
 A sequential model is constructed using CNN, MaxPooling , Flatten and Dense layers. There have been several papers on using CNN for recognizing objects, such as [1] where the authors have built a simple CNN model to recognize hand gestures. With this knowledge we can construct a Deep Neural Network model, the details of the model have been shown below.
 
 
- 
+ <img width="246" alt="image" src="https://github.com/prackash/Rock-Paper-Scissor-classification-using-CNN/assets/72211071/e825a710-4dbc-407d-90a9-5e84ed35efa3">
+
 
 
 The DNN has been built with the help 4 CNN layers with relu as activation functions, and max pooling layer to subsample the features, at the end it is connected to a fully connected layer consisting of 2 dense layers for the purpose of classification.
 
 A flatten layer is used to flatten the output from the CNN modules and then is supplied to the Fully Connected layer.
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 4.	Implementation
@@ -125,13 +113,17 @@ history= model2.fit(
 With this model an accuracy of 99.96% for the training data and validation accuracy of 90.91% each with a loss of 7.7764e-04 and 0.7126 respectively. The model is checked for the testing dataset aswell and it achieved an accuracy of 93.010% and loss of 0.174. With a decent model trained, the model is saved completing the Part 1 of the coursework, now the model can be used to perform the part 2.
 
  
- 
+ <img width="273" alt="image" src="https://github.com/prackash/Rock-Paper-Scissor-classification-using-CNN/assets/72211071/93bd4134-794e-46e6-8223-2d2acf004521">
+
+<img width="265" alt="image" src="https://github.com/prackash/Rock-Paper-Scissor-classification-using-CNN/assets/72211071/0d23f809-333d-4460-9c03-fe047cbf004f">
+
 
 
 print("Loss of the model is - " , model2.evaluate(test_generator)[0])
 print("Accuracy of the model is - " , model2.evaluate(test_generator)[1]*100 , "%")
 
- 
+ <img width="523" alt="image" src="https://github.com/prackash/Rock-Paper-Scissor-classification-using-CNN/assets/72211071/b6923b62-47fc-4bfb-b2f4-b044206e73fc">
+
 
 model.save("final_modelk5.h5")
 
@@ -145,43 +137,20 @@ Using the summary function of the model, the loaded model architecture can be vi
 
 The images which the model is going to be tested with, the images are read as tensor then converted into grayscale and reshaped into a 4-dimensional tensor.
 
+ <img width="173" alt="image" src="https://github.com/prackash/Rock-Paper-Scissor-classification-using-CNN/assets/72211071/61c2a78a-8b3b-4768-b12c-e0a5d0db62d6">
+
+<img width="179" alt="image" src="https://github.com/prackash/Rock-Paper-Scissor-classification-using-CNN/assets/72211071/25c4e653-5916-453e-b107-05ae2304bb54">
+
+<img width="158" alt="image" src="https://github.com/prackash/Rock-Paper-Scissor-classification-using-CNN/assets/72211071/d3d86803-b596-430f-b762-ed04a9c0aa4c">
+
  
-
-
- 
-
-
- 
-
-
 The model successfully classifies the images into their respective shapes.
 
 The model is now loaded into the third script to play a game of rock paper scissor using the images provided in the test data.
 
 A function called rps_game is created to determine the winner of the round and plots the winning hand gesture.
- 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<img width="270" alt="image" src="https://github.com/prackash/Rock-Paper-Scissor-classification-using-CNN/assets/72211071/4c69dc2d-facf-42d8-9d8b-7f417786742a">
 
 Hyper parameter tuning:
 
@@ -190,80 +159,39 @@ Hyper parameter tuning:
 Changing the Kernel Size from (5,5) to (3,3) increases the validity loss and decreases the validation accuracy.
 
 
- 
+ <img width="202" alt="image" src="https://github.com/prackash/Rock-Paper-Scissor-classification-using-CNN/assets/72211071/7ef36c97-b826-45a6-933c-c4ffa5e07fa2">
 
+<img width="212" alt="image" src="https://github.com/prackash/Rock-Paper-Scissor-classification-using-CNN/assets/72211071/dce8b55a-72bf-4cb1-a60c-871cc2bd2045">
 
- 
- 
+<img width="218" alt="image" src="https://github.com/prackash/Rock-Paper-Scissor-classification-using-CNN/assets/72211071/5fd223fa-2a3b-4782-8178-d1da856889be">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+<img width="523" alt="image" src="https://github.com/prackash/Rock-Paper-Scissor-classification-using-CNN/assets/72211071/3fe21863-3d83-43f2-8266-5efc4d49e01f">
 
 2.	Number of Hidden Layers
 
 Increasing the hidden layers increases the training time, the loss and decreases the accuracy of the model compared to the base model. This also significantly makes the model take of more size on the memory
 
 
- 
- 
+ <img width="197" alt="image" src="https://github.com/prackash/Rock-Paper-Scissor-classification-using-CNN/assets/72211071/9977108e-61da-4c17-9c8b-45d8458ff036">
 
- 
+ <img width="210" alt="image" src="https://github.com/prackash/Rock-Paper-Scissor-classification-using-CNN/assets/72211071/3a00af3d-8ec2-467f-a7f5-5867549d28e5">
 
+<img width="210" alt="image" src="https://github.com/prackash/Rock-Paper-Scissor-classification-using-CNN/assets/72211071/7c99c6d3-5ec3-498b-905b-ffa2f0cf7e5f">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<img width="523" alt="image" src="https://github.com/prackash/Rock-Paper-Scissor-classification-using-CNN/assets/72211071/f0594bd1-72c0-4c47-b6c8-965538e3aa41">
 
 3.	Number of neurons per layer
-
 
 Despite have a higher accuracy in testing data, it is to be noted that the loss of the model is high and in the graph, we can observe that it changes drastically for validation accuracy and loss. 
 
 
+<img width="203" alt="image" src="https://github.com/prackash/Rock-Paper-Scissor-classification-using-CNN/assets/72211071/9d5741cd-6ca2-44e8-9922-68441c7b0298">
 
- 
- 
- 
+<img width="223" alt="image" src="https://github.com/prackash/Rock-Paper-Scissor-classification-using-CNN/assets/72211071/1846bd40-a3b3-4bf0-b3c2-fb13e40422af">
 
+<img width="194" alt="image" src="https://github.com/prackash/Rock-Paper-Scissor-classification-using-CNN/assets/72211071/5a71df15-a6c2-469e-8354-3e5b026d3b1c">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ <img width="480" alt="image" src="https://github.com/prackash/Rock-Paper-Scissor-classification-using-CNN/assets/72211071/7aa7f3c8-7bc8-4200-9421-d04177640f78">
 
 5.	Conclusion & Future Works
 
